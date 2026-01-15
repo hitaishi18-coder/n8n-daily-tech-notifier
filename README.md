@@ -1,37 +1,97 @@
-# n8n Daily Tech Notifier 📲
+# 🤖 Daily Joke Notifier – n8n Automation
 
-This project is an automation workflow built using n8n.
+Daily Joke Notifier is an **automation workflow built with n8n** that fetches a random joke from a public API and sends it to your phone automatically using **Twilio SMS**.
 
-## 🚀 What it does
-- Runs on a schedule trigger
-- Fetches data from an API
-- Formats the message
-- Sends SMS notifications using Twilio
+This project demonstrates **workflow automation**, **API integration**, and **scheduled task execution** in a real-world use case.
 
-## 🧩 Nodes used
-- Schedule Trigger  
-- HTTP Request  
-- Edit Fields  
-- Twilio SMS
+---
 
-## ☁️ Deployed n8n instance
-https://n8n-latest-qhs9.onrender.com
+## 🚀 Features
 
-## ⚙️ How to use
-1. Import `My workflow.json` into your n8n instance  
-2. Add your Twilio credentials  
-3. Set your phone number in Twilio node  
-4. Activate the workflow  
+- Runs automatically on a daily schedule  
+- Fetches a random joke from the Official Joke API  
+- Formats a clean readable message  
+- Sends the joke via SMS using Twilio  
+- Fully automated — no manual action needed  
 
-## 🛠️ Built with
-- n8n  
-- Twilio  
-- Render
+---
 
-## ✨ Author
-Hitaishi Lohtia
+## ⚙️ Workflow Overview
+
+Inside n8n, the automation flow looks like this:
+
+[Schedule Trigger]
+→ [HTTP Request (Joke API)]
+→ [Edit Fields (Format Message)]
+→ [Twilio SMS (Send Message)]
+
+
+
+---
 
 ## 🖼️ Workflow Screenshot
-![n8n workflow] (<img width="954" height="476" alt="n8n-workflow" src="https://github.com/user-attachments/assets/2040be49-80bd-4948-8f56-a0ddfba6efc9" />
 
-)
+![Workflow](<img width="954" height="476" alt="n8n-workflow" src="https://github.com/user-attachments/assets/2040be49-80bd-4948-8f56-a0ddfba6efc9" />)
+
+---
+
+## 🧠 Skills Demonstrated
+
+- Workflow automation with n8n  
+- REST API integration  
+- Data transformation inside workflows  
+- Twilio SMS integration  
+- Scheduled background jobs  
+
+---
+
+## 😄 Example Joke Message
+
+😂 Daily Joke 😂
+
+Why don’t programmers like nature?
+
+Because it has too many bugs
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Download or clone this repository.
+
+2. Import the workflow into n8n  
+   → Workflows → Import from File → Select the workflow JSON
+
+3. Configure Twilio credentials in n8n:
+   - Account SID  
+   - Auth Token  
+   - Your verified phone number  
+
+4. Update the **To** field in the Twilio node with your phone number.
+
+5. Activate the workflow.
+
+---
+
+## ✅ Result
+
+Now you will receive:
+
+- A fresh joke every day  
+- Delivered automatically via SMS  
+- Without opening n8n manually  
+
+---
+
+## 📌 Tech Stack
+
+- n8n (Workflow Automation)  
+- Official Joke API  
+- Twilio SMS API  
+
+---
+
+## 👩‍💻 Author
+
+**Hitaishi Lohtia**  
+Automation & Web Developer
