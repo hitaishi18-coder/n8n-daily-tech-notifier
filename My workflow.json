@@ -1,0 +1,152 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "c9ffb0e4-7e50-4280-9fc6-4eaaba756711",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://official-joke-api.appspot.com/random_joke",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "2a0efe6d-3ae3-4d75-aa49-795bb431b1e6",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "26a2ab34-fbbd-4861-ae2d-a1e631f91da5",
+              "name": "message",
+              "value": "=={{\"😂 Daily Joke 😂\\n\\n\" + $json.setup + \"\\n\\n\" + $json.punchline}}\n",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        416,
+        0
+      ],
+      "id": "48818aef-2dae-4c0b-bfb4-c25664827394",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "from": "whatsapp:+14155238886",
+        "to": "whatsapp:+919988467270",
+        "message": "={{$json.message}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.twilio",
+      "typeVersion": 1,
+      "position": [
+        624,
+        0
+      ],
+      "id": "717b24ec-0bcd-49ec-a980-54b8578b17c2",
+      "name": "Send an SMS/MMS/WhatsApp message",
+      "credentials": {
+        "twilioApi": {
+          "id": "6f1Vzhoi9f9UawiZ",
+          "name": "Twilio account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Schedule Trigger": [
+      {
+        "json": {
+          "timestamp": "2026-01-15T10:42:58.300-05:00",
+          "Readable date": "January 15th 2026, 10:42:58 am",
+          "Readable time": "10:42:58 am",
+          "Day of week": "Thursday",
+          "Year": "2026",
+          "Month": "January",
+          "Day of month": "15",
+          "Hour": "10",
+          "Minute": "42",
+          "Second": "58",
+          "Timezone": "America/New_York (UTC-05:00)"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Send an SMS/MMS/WhatsApp message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "4dd3bb66-ad0f-4f51-bb1e-4c348896ef68",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a4a660c9a41fd053d87777f28c2ab98dd8d90b580b1ec98a9c5d5b30a11a3079"
+  },
+  "id": "UhTasIvwBJZyNb7fkUZ7w",
+  "tags": []
+}
