@@ -32,5 +32,5 @@ https://n8n-latest-qhs9.onrender.com
 Hitaishi Lohtia
 
 ## 🖼️ Workflow Screenshot
-![n8n workflow] (<img width="959" height="481" alt="n8n-workflow" src="https://github.com/user-attachments/assets/4102f007-3af1-465c-86e0-8c0fd8ceb362" />
+![n8n workflow] (<img width="959" height="476" alt="n8n-workflow" src="https://github.com/user-attachments/assets/ea3e55d3-c5c7-40f2-94e4-1064f18f865b" />
 )
