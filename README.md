@@ -34,6 +34,8 @@ Inside n8n, the automation flow looks like this:
 ![Workflow]
 <img width="954" height="476" alt="n8n-workflow" src="https://github.com/user-attachments/assets/6eb0313a-8452-4dcd-a58f-a692e2abe509" />
 
+![n8n-output](https://github.com/user-attachments/assets/d050dd8c-511e-41cc-9c3d-f69c04b6ba35)
+
 
 ---
 
